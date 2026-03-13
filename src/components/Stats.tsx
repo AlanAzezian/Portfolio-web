@@ -46,7 +46,7 @@ export default function Stats() {
             viewport={{ once: true }}
             whileHover={{ y: -5 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="flex flex-col items-center sm:items-start p-6 rounded-2xl bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 hover:bg-zinc-200 dark:hover:bg-white/10 transition-colors group"
+            className="flex flex-col items-center sm:items-start p-6 rounded-2xl bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 hover:bg-zinc-200 dark:hover:bg-white/10 hover:-translate-y-1 hover:border-blue-500/30 dark:hover:border-blue-500/50 hover:shadow-lg transition-all duration-300 group"
           >
             <div className="flex items-center gap-4 mb-4">
               <div className={`p-3 rounded-xl ${stat.bg} ${stat.color} ${stat.border} border group-hover:scale-110 transition-transform`}>
