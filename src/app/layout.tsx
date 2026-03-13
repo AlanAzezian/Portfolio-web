@@ -42,7 +42,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-50 text-zinc-900 dark:bg-[#0a0a0a] dark:text-[#ededed] min-h-screen font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-50 text-zinc-900 dark:bg-[#0a0a0a] dark:text-[#ededed] min-h-screen font-sans animate-fade-in`}
       >
         <BackgroundEffects />
         <div className="glow-overlay opacity-0 dark:opacity-100 transition-opacity duration-500" />

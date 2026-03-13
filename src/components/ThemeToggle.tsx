@@ -46,8 +46,8 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className={`relative inline-flex h-8 w-16 px-1 items-center rounded-full transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 ${
-        isDark ? "bg-[#3b82f6]" : "bg-gray-300"
+      className={`relative inline-flex h-8 w-16 px-1 items-center rounded-full transition-all duration-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 ${
+        isDark ? "bg-[#3b82f6] shadow-[0_0_15px_rgba(59,130,246,0.5)]" : "bg-gray-300 shadow-inner"
       }`}
       aria-label="Toggle Dark Mode"
     >
@@ -56,7 +56,12 @@ export default function ThemeToggle() {
         animate={{
           x: isDark ? 32 : 0,
         }}
-        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        transition={{
+          type: "spring",
+          stiffness: 400,
+          damping: 25,
+          mass: 1,
+        }}
         className="w-6 h-6 rounded-full bg-white flex items-center justify-center shadow-sm"
       >
         <Moon className={`w-3.5 h-3.5 ${isDark ? "text-blue-500" : "text-gray-500"}`} />
