@@ -2,37 +2,40 @@
 
 import { motion } from "framer-motion";
 import { BookOpen, Gamepad2, HeartPulse, PlaySquare } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Timeline() {
+  const { t } = useLanguage();
+
   const timelineEvents = [
     {
-      title: "Start Programming Studies",
-      organization: "UTN General Pacheco",
-      description: "Began my journey into software development, learning foundational concepts.",
+      title: t.timeline.events.event1.title,
+      organization: t.timeline.events.event1.org,
+      description: t.timeline.events.event1.desc,
       icon: BookOpen,
       color: "bg-blue-500",
       glow: "shadow-[0_0_15px_rgba(59,130,246,0.5)]"
     },
     {
-      title: "Developed GREED Game Project",
-      organization: "Academic Project",
-      description: "Applied logical thinking and control structures in C to build a functional console game.",
+      title: t.timeline.events.event2.title,
+      organization: t.timeline.events.event2.org,
+      description: t.timeline.events.event2.desc,
       icon: Gamepad2,
       color: "bg-purple-500",
       glow: "shadow-[0_0_15px_rgba(168,85,247,0.5)]"
     },
     {
-      title: "Developed Teatro Chino System",
-      organization: "Final Course Project (Programming II)",
-      description: "Built a cinema management system using C++, Object-Oriented Programming, and File Management.",
+      title: t.timeline.events.event3.title,
+      organization: t.timeline.events.event3.org,
+      description: t.timeline.events.event3.desc,
       icon: PlaySquare,
       color: "bg-rose-500",
       glow: "shadow-[0_0_15px_rgba(244,63,94,0.5)]"
     },
     {
-      title: "Developed NeoVida Management System",
-      organization: "Academic Project",
-      description: "Structured relational databases with SQL Server and connected them via C# logic.",
+      title: t.timeline.events.event4.title,
+      organization: t.timeline.events.event4.org,
+      description: t.timeline.events.event4.desc,
       icon: HeartPulse,
       color: "bg-emerald-500",
       glow: "shadow-[0_0_15px_rgba(16,185,129,0.5)]"
@@ -48,7 +51,7 @@ export default function Timeline() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="text-sm font-mono text-zinc-500 mb-12 uppercase tracking-wider">
-          ~/ journey
+          {t.timeline.title}
         </h3>
 
         <div className="relative border-l border-zinc-200 dark:border-white/10 ml-4 md:ml-6 space-y-12">

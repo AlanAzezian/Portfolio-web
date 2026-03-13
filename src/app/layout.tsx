@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import BackgroundEffects from "@/components/BackgroundEffects";
 import ThemeToggle from "@/components/ThemeToggle";
+import LanguageSelector from "@/components/LanguageSelector";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,12 +46,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-50 text-zinc-900 dark:bg-[#0a0a0a] dark:text-[#ededed] min-h-screen font-sans animate-fade-in`}
       >
-        <BackgroundEffects />
-        <div className="glow-overlay opacity-0 dark:opacity-100 transition-opacity duration-500" />
-        <div className="fixed top-6 right-6 sm:top-8 sm:right-8 z-50">
-          <ThemeToggle />
-        </div>
-        {children}
+        <LanguageProvider>
+          <BackgroundEffects />
+          <div className="glow-overlay opacity-0 dark:opacity-100 transition-opacity duration-500" />
+          <div className="fixed top-6 right-6 sm:top-8 sm:right-8 z-50 flex items-center gap-3">
+            <LanguageSelector />
+            <ThemeToggle />
+          </div>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

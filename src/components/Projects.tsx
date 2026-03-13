@@ -3,32 +3,35 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
-
-const projects = [
-  {
-    title: "NeoVida – Medical Management System",
-    description: "A medical management system developed as an academic project to organize and manage patient information using a structured database.",
-    technologies: ["C#", "SQL Server", "Visual Studio"],
-    githubUrl: "#", // Replace with actual URL later
-    link: "/projects/neovida"
-  },
-  {
-    title: "Teatro Chino TCL – Cinema Management System",
-    description: "A cinema management system developed as a final project for a Programming II course, designed to manage movies, cinema rooms, and ticket sales.",
-    technologies: ["C++", "Object-Oriented Programming", "File Management"],
-    githubUrl: "#", // Replace with actual URL later
-    link: "/projects/teatro_chino"
-  },
-  {
-    title: "GREED – Game Development Project",
-    description: "A game developed as part of a programming assignment focused on logic, algorithms and control structures.",
-    technologies: ["C Programming Language", "Algorithms", "Game Logic"],
-    githubUrl: "#", // Replace with actual URL later
-    link: "/projects/greed"
-  }
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Projects() {
+  const { t } = useLanguage();
+
+  const projects = [
+    {
+      title: t.projects.items.neovida.title,
+      description: t.projects.items.neovida.desc,
+      technologies: ["C#", "SQL Server", "Visual Studio"],
+      githubUrl: "#", // Replace with actual URL later
+      link: "/projects/neovida"
+    },
+    {
+      title: t.projects.items.teatro.title,
+      description: t.projects.items.teatro.desc,
+      technologies: ["C++", "Object-Oriented Programming", "File Management"],
+      githubUrl: "#", // Replace with actual URL later
+      link: "/projects/teatro_chino"
+    },
+    {
+      title: t.projects.items.greed.title,
+      description: t.projects.items.greed.desc,
+      technologies: ["C Programming Language", "Algorithms", "Game Logic"],
+      githubUrl: "#", // Replace with actual URL later
+      link: "/projects/greed"
+    }
+  ];
+
   return (
     <section id="projects" className="py-20 border-t border-zinc-200 dark:border-white/10">
       <motion.div
@@ -38,7 +41,7 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="text-sm font-mono text-zinc-500 mb-12 uppercase tracking-wider">
-          ~/ projects
+          {t.projects.title}
         </h3>
         
         <div className="grid gap-6 md:grid-cols-2">
@@ -93,9 +96,9 @@ export default function Projects() {
                 <div className="mt-auto pt-4 border-t border-zinc-200 dark:border-white/10 flex justify-end">
                   <Link 
                     href={(project as any).link}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white dark:text-zinc-900 bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-lg transition-colors"
+                     className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white dark:text-zinc-900 bg-zinc-900 dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 rounded-lg transition-colors"
                   >
-                    View Project
+                    {t.projects.viewProject}
                   </Link>
                 </div>
               )}

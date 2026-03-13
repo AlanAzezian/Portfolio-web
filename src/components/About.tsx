@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 
 import { Code2, MapPin, GraduationCap } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-20 border-t border-zinc-200 dark:border-white/10">
       <motion.div
@@ -14,16 +17,16 @@ export default function About() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="text-sm font-mono text-zinc-500 mb-8 uppercase tracking-wider">
-          ~/ about me
+          {t.about.title}
         </h3>
         
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-3 prose prose-invert max-w-none text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg space-y-6">
             <p>
-              I am currently studying programming at <strong className="text-zinc-900 dark:text-zinc-200 font-semibold">Universidad Tecnológica Nacional (UTN)</strong> in General Pacheco, Argentina. 
+              {t.about.p1_start} <strong className="text-zinc-900 dark:text-zinc-200 font-semibold">{t.about.p1_strong}</strong> {t.about.p1_end}
             </p>
             <p>
-              I enjoy building software projects and solving problems through code. My goal is to continually grow as a developer, build efficient applications, and work in the software industry.
+              {t.about.p2}
             </p>
           </div>
 
@@ -37,15 +40,15 @@ export default function About() {
           >
             <div className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300">
               <GraduationCap size={20} className="text-emerald-400" />
-              <span className="text-sm font-medium">Programming Student</span>
+              <span className="text-sm font-medium">{t.about.student}</span>
             </div>
             <div className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300">
               <MapPin size={20} className="text-blue-400" />
-              <span className="text-sm font-medium">UTN General Pacheco</span>
+              <span className="text-sm font-medium">{t.about.university}</span>
             </div>
             <div className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300">
               <Code2 size={20} className="text-purple-400" />
-              <span className="text-sm font-medium">Software Development</span>
+              <span className="text-sm font-medium">{t.about.development}</span>
             </div>
           </motion.div>
         </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 import { Code2, Database, Terminal, Layout, FileJson, Braces, BookOpen } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const skills = [
   { name: "C", icon: Terminal, color: "text-blue-400", bg: "bg-blue-400/10", border: "border-blue-400/20" },
@@ -15,6 +16,8 @@ const skills = [
 ];
 
 export default function Skills() {
+  const { t } = useLanguage();
+
   return (
     <section id="skills" className="py-20 border-t border-zinc-200 dark:border-white/10">
       <motion.div
@@ -24,7 +27,7 @@ export default function Skills() {
         transition={{ duration: 0.5 }}
       >
         <h3 className="text-sm font-mono text-zinc-500 mb-12 uppercase tracking-wider">
-          ~/ skills
+          {t.skills.title}
         </h3>
         
         <div className="flex flex-wrap gap-4">

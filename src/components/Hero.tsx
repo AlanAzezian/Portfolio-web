@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { Github, Mail, SearchCode } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-20">
       <motion.div
@@ -17,10 +20,10 @@ export default function Hero() {
           Alan Azezian
         </h1>
         <h2 className="text-xl sm:text-2xl text-zinc-600 dark:text-zinc-400 mb-6 font-medium">
-          Programming Student – UTN General Pacheco
+          {t.hero.subtitle}
         </h2>
         <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed max-w-xl">
-          I am a programming student passionate about building software and learning new technologies.
+          {t.hero.description}
         </p>
 
         <div className="flex flex-wrap gap-4">
@@ -29,7 +32,7 @@ export default function Hero() {
             className="inline-flex items-center justify-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
           >
             <SearchCode size={18} />
-            View Projects
+            {t.hero.viewProjects}
           </Link>
           <Link
             href="https://mail.google.com/mail/?view=cm&fs=1&to=agazezian@gmail.com"
@@ -38,7 +41,7 @@ export default function Hero() {
             className="inline-flex items-center justify-center gap-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white px-6 py-2.5 rounded-full font-medium hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
           >
             <Mail size={18} />
-            Contact
+            {t.hero.contact}
           </Link>
           <Link
             href="https://github.com/AlanAzezian"
@@ -47,7 +50,7 @@ export default function Hero() {
             className="inline-flex items-center justify-center gap-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 text-zinc-900 dark:text-white px-6 py-2.5 rounded-full font-medium hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
           >
             <Github size={18} />
-            GitHub
+            {t.hero.github}
           </Link>
         </div>
       </motion.div>

@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import { FolderGit2, Blocks, Building2 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Stats() {
+  const { t } = useLanguage();
+
   const stats = [
     {
-      label: "Projects Built",
+      label: t.stats.projectsTitle,
       value: "3",
       icon: FolderGit2,
       color: "text-blue-400",
@@ -14,7 +17,7 @@ export default function Stats() {
       border: "border-blue-400/20"
     },
     {
-      label: "Technologies Learned",
+      label: t.stats.techTitle,
       value: "6+",
       icon: Blocks,
       color: "text-purple-400",
@@ -22,9 +25,9 @@ export default function Stats() {
       border: "border-purple-400/20"
     },
     {
-      label: "Currently Studying",
+      label: t.stats.studyTitle,
       value: "UTN",
-      subtext: "Programming",
+      subtext: t.stats.studySub,
       icon: Building2,
       color: "text-emerald-400",
       bg: "bg-emerald-400/10",

@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <footer id="contact" className="py-20 border-t border-zinc-200 dark:border-white/10">
       <motion.div
@@ -16,10 +19,10 @@ export default function Contact() {
       >
         <div className="text-center md:text-left">
           <h3 className="text-sm font-mono text-zinc-500 mb-4 uppercase tracking-wider">
-            ~/ say hi
+            {t.contact.title}
           </h3>
           <p className="text-zinc-600 dark:text-zinc-400">
-            Feel free to reach out for collaborations or just a friendly chat.
+            {t.contact.desc}
           </p>
         </div>
         
@@ -31,7 +34,7 @@ export default function Contact() {
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2"
           >
             <Mail size={20} />
-            <span className="hidden sm:inline">Email</span>
+            <span className="hidden sm:inline">{t.contact.email}</span>
           </Link>
           <Link
             href="https://github.com/AlanAzezian"
@@ -40,20 +43,20 @@ export default function Contact() {
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2"
           >
             <Github size={20} />
-            <span className="hidden sm:inline">GitHub</span>
+            <span className="hidden sm:inline">{t.contact.github}</span>
           </Link>
           <Link
             href="#"
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2"
           >
             <Linkedin size={20} />
-            <span className="hidden sm:inline">LinkedIn</span>
+            <span className="hidden sm:inline">{t.contact.linkedin}</span>
           </Link>
         </div>
       </motion.div>
       
       <div className="mt-20 text-center text-sm text-zinc-600">
-        <p>© {new Date().getFullYear()} Alan Azezian. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} {t.contact.rights}</p>
       </div>
     </footer>
   );
