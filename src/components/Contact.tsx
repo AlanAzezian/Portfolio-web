@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <footer id="contact" className="py-20 border-t border-white/10">
+    <footer id="contact" className="py-20 border-t border-zinc-200 dark:border-white/10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ export default function Contact() {
           <h3 className="text-sm font-mono text-zinc-500 mb-4 uppercase tracking-wider">
             ~/ say hi
           </h3>
-          <p className="text-zinc-400">
+          <p className="text-zinc-600 dark:text-zinc-400">
             Feel free to reach out for collaborations or just a friendly chat.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function Contact() {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=agazezian@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+            className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2"
           >
             <Mail size={20} />
             <span className="hidden sm:inline">Email</span>
@@ -37,14 +37,14 @@ export default function Contact() {
             href="https://github.com/AlanAzezian"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+            className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2"
           >
             <Github size={20} />
             <span className="hidden sm:inline">GitHub</span>
           </Link>
           <Link
             href="#"
-            className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
+            className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2"
           >
             <Linkedin size={20} />
             <span className="hidden sm:inline">LinkedIn</span>

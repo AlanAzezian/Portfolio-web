@@ -12,7 +12,7 @@ export default function BackgroundEffects() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden bg-[#0a0a0a]">
+    <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden opacity-0 dark:opacity-100 transition-opacity duration-500">
       {/* 
         Using simple static radial gradients instead of heavy blur filters.
         Browsers render radial-gradients much faster than wide-radius blurs.

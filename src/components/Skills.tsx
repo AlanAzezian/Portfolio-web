@@ -16,7 +16,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 border-t border-white/10">
+    <section id="skills" className="py-20 border-t border-zinc-200 dark:border-white/10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Skills() {
                 type: "spring",
                 stiffness: 100,
               }}
-              className={`flex items-center gap-3 px-6 py-4 bg-zinc-900/50 backdrop-blur-sm border border-white/10 rounded-2xl text-zinc-300 font-medium hover:bg-white/5 transition-all cursor-default select-none shadow-sm`}
+              className={`flex items-center gap-3 px-6 py-4 bg-zinc-100/80 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200 dark:border-white/10 rounded-2xl text-zinc-700 dark:text-zinc-300 font-medium hover:bg-zinc-200 dark:hover:bg-white/5 transition-all cursor-default select-none shadow-sm`}
             >
               <div className={`p-2 rounded-lg ${skill.bg} ${skill.color} ${skill.border} border`}>
                 <skill.icon size={20} />
