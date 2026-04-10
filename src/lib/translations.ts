@@ -72,7 +72,7 @@ export const translations = {
         },
         greed: {
           title: "GREED – Game Development Project",
-          desc: "Game developed in C as an academic project, focused on implementing game logic. It involved working with control structures, state management, and algorithms to handle player interactions."
+          desc: "Game developed in C++ as an academic project, focused on implementing game logic. It involved working with control structures, state management, and algorithms to handle player interactions."
         }
       },
       details: {
@@ -168,7 +168,7 @@ export const translations = {
           statusTitle: "Project Status"
         },
         greed: {
-          p1: "Game developed in C as an academic project, focused on implementing game logic. It involved working with control structures, state management, and algorithms to handle player interactions.",
+          p1: "Game developed in C++ as an academic project, focused on implementing game logic. It involved working with control structures, state management, and algorithms to handle player interactions.",
           responsibilitiesTitle: "Responsibilities",
           responsibilities: [
             "Game logic implementation",
@@ -180,7 +180,7 @@ export const translations = {
           architectureDesc: "The program processes player input sequentially. The game loop captures commands natively, evaluates the actions through the game's logic algorithms, updates the internal memory structures representing the game state, and finally renders the new frame back to the console output.",
           featuresTitle: "Main Features",
           features: [
-            "Implementation of game mechanics using C",
+            "Implementation of game mechanics using C++",
             "Player interaction through console input",
             "Game state management",
             "Use of loops, conditionals and structured logic",
@@ -275,7 +275,7 @@ export const translations = {
         },
         greed: {
           title: "GREED – Proyecto de Desarrollo de Juego",
-          desc: "Juego desarrollado en C como proyecto académico, enfocado en la implementación de lógica de juego. Se trabajó con estructuras de control, manejo de estados y algoritmos para gestionar las interacciones del jugador."
+          desc: "Juego desarrollado en C++ como proyecto académico, enfocado en la implementación de lógica de juego. Se trabajó con estructuras de control, manejo de estados y algoritmos para gestionar las interacciones del jugador."
         }
       },
       details: {
@@ -371,7 +371,7 @@ export const translations = {
           statusTitle: "Estado del Proyecto"
         },
         greed: {
-          p1: "Juego desarrollado en C como proyecto académico, enfocado en la implementación de lógica de juego. Se trabajó con estructuras de control, manejo de estados y algoritmos para gestionar las interacciones del jugador.",
+          p1: "Juego desarrollado en C++ como proyecto académico, enfocado en la implementación de lógica de juego. Se trabajó con estructuras de control, manejo de estados y algoritmos para gestionar las interacciones del jugador.",
           responsibilitiesTitle: "Responsabilidades",
           responsibilities: [
             "Implementación de lógica del juego",
@@ -383,7 +383,7 @@ export const translations = {
           architectureDesc: "El programa procesa secuencialmente la entrada del jugador. El bucle del juego captura los comandos de forma nativa, evalúa las acciones mediante los algoritmos de lógica del juego, actualiza las estructuras de memoria internas que representan el estado del juego y finalmente renderiza el nuevo cuadro devuelta a la salida de la consola.",
           featuresTitle: "Características Principales",
           features: [
-            "Implementación de mecánicas de juego en C",
+            "Implementación de mecánicas de juego en C++",
             "Interacción del jugador mediante entrada en consola",
             "Gestión del estado del juego",
             "Uso de bucles, condicionales y lógica estructurada",

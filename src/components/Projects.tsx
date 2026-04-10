@@ -29,7 +29,7 @@ export default function Projects() {
     {
       title: t.projects.items.greed.title,
       description: t.projects.items.greed.desc,
-      technologies: ["C Programming Language", "Algorithms", "Game Logic"],
+      technologies: ["C++", "Algorithms", "Game Logic"],
       githubUrl: "#", // Replace with actual URL later
       link: "/projects/greed",
       image: "/projects/greed/cover.png"

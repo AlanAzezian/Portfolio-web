@@ -40,7 +40,7 @@ export default function GreedProject() {
           </h1>
           
           <div className="flex flex-wrap gap-3 mb-8">
-            {["C Programming Language", "Algorithms", "Structured Programming"].map((tech) => (
+            {["C++", "Algorithms", "Structured Programming"].map((tech) => (
               <span 
                 key={tech} 
                 className="px-4 py-1.5 text-sm font-medium bg-zinc-200/50 dark:bg-white/5 text-zinc-700 dark:text-zinc-200 rounded-full border border-zinc-300 dark:border-white/10"
