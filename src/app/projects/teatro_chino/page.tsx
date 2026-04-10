@@ -123,12 +123,21 @@ export default function TeatroChinoProject() {
             ))}
           </div>
 
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8">
             {project.p1}
           </p>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-12">
-            {project.p2}
-          </p>
+
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold mb-4 text-zinc-800 dark:text-zinc-200">{project.responsibilitiesTitle}</h3>
+            <ul className="space-y-3">
+              {project.responsibilities?.map((resp: string, i: number) => (
+                <li key={i} className="flex items-start gap-3 text-zinc-600 dark:text-zinc-400">
+                  <span className="text-zinc-400 dark:text-zinc-500 font-bold mt-0.5">•</span>
+                  <span className="leading-relaxed">{resp}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
 
         {/* Screenshots placeholders */}

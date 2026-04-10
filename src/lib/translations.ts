@@ -64,20 +64,27 @@ export const translations = {
       items: {
         neovida: {
           title: "NeoVida – Medical Management System",
-          desc: "A medical management system developed as an academic project to organize and manage patient information using a structured database."
+          desc: "NeoVida is a medical management system developed in C# and SQL Server. It allows registering, querying, and updating patient information, storing data in a structured relational database."
         },
         teatro: {
           title: "Teatro Chino TCL – Cinema Management System",
-          desc: "A cinema management system developed as a final project for a Programming II course, designed to manage movies, cinema rooms, and ticket sales."
+          desc: "Cinema management system developed in C++. It allows managing movies, screens, and ticket sales, including the generation of operational reports. It implements object-oriented programming and file handling for data persistence."
         },
         greed: {
           title: "GREED – Game Development Project",
-          desc: "A game developed as part of a programming assignment focused on logic, algorithms and control structures."
+          desc: "Game developed in C as an academic project, focused on implementing game logic. It involved working with control structures, state management, and algorithms to handle player interactions."
         }
       },
       details: {
         neovida: {
-          p1: "NeoVida is a management system developed as an academic project with the goal of organizing and managing medical information within a healthcare environment. The system allows users to register, consult and update patient information while storing data in a structured database.",
+          p1: "NeoVida is a medical management system developed in C# and SQL Server. It allows registering, querying, and updating patient information, storing data in a structured database.",
+          responsibilitiesTitle: "Responsibilities",
+          responsibilities: [
+            "Logic development in C#",
+            "Database design in SQL Server",
+            "Implementation of data validations",
+            "Database connection with ADO.NET"
+          ],
           architecture: "Project Architecture",
           architectureDesc: "The application interacts heavily with a relational database to store and retrieve patient profiles, medical histories, and system configurations. The structured C# logic layer acts as a bridge ensuring safe query execution and data validation before displaying it on the interface.",
           featuresTitle: "Main Features",
@@ -93,8 +100,13 @@ export const translations = {
           statusTitle: "Project Status"
         },
         teatro: {
-          p1: "This project is a cinema management system developed as a final project for a Programming II course. The system was designed to manage information related to movies, cinema rooms and ticket sales.",
-          p2: "The program allows users to register movies, assign them to cinema rooms, manage ticket sales and generate operational reports. The system uses object-oriented programming and file-based data storage to simulate the management of a real cinema.",
+          p1: "Cinema management system developed in C++. It allows managing movies, screens, and ticket sales, including the generation of operational reports. It implements object-oriented programming and file handling for data persistence.",
+          responsibilitiesTitle: "Responsibilities",
+          responsibilities: [
+            "Class modeling and logic in C++",
+            "Implementation of file storage",
+            "Development of management features and reports"
+          ],
           architecture: "Project Architecture",
           architectureDesc: "The system achieves a clean separation of concerns by isolating business logic into object-oriented entity classes. These entities communicate with a dedicated file management layer responsible for reading and writing binary data to disk, ensuring that the core logic remains independent of the storage mechanism.",
           operationTitle: "System Operation",
@@ -156,8 +168,14 @@ export const translations = {
           statusTitle: "Project Status"
         },
         greed: {
-          p1: "GREED is a programming project developed as part of a university assignment. The objective of the project was to build a functional game while applying core programming concepts such as algorithms, control structures, and problem solving.",
-          p2: "The project focuses on implementing the internal logic of the game, handling player interactions, and managing the game state through code.",
+          p1: "Game developed in C as an academic project, focused on implementing game logic. It involved working with control structures, state management, and algorithms to handle player interactions.",
+          responsibilitiesTitle: "Responsibilities",
+          responsibilities: [
+            "Game logic implementation",
+            "Use of control structures (if, for)",
+            "State management and game flow",
+            "Development of basic algorithms"
+          ],
           architecture: "Project Architecture",
           architectureDesc: "The program processes player input sequentially. The game loop captures commands natively, evaluates the actions through the game's logic algorithms, updates the internal memory structures representing the game state, and finally renders the new frame back to the console output.",
           featuresTitle: "Main Features",
@@ -249,20 +267,27 @@ export const translations = {
       items: {
         neovida: {
           title: "NeoVida – Sistema de Gestión Médica",
-          desc: "Un sistema de gestión médica desarrollado como proyecto académico para organizar y gestionar la información de pacientes utilizando una base de datos estructurada."
+          desc: "NeoVida es un sistema de gestión médica desarrollado en C# y SQL Server. Permite registrar, consultar y actualizar información de pacientes, almacenando los datos en una base de datos relacional estructurada."
         },
         teatro: {
           title: "Teatro Chino TCL – Sistema de Gestión de Cines",
-          desc: "Un sistema de gestión de cines desarrollado como proyecto final para el curso de Programación II, diseñado para gestionar películas, salas de cine y venta de entradas."
+          desc: "Sistema de gestión de cines desarrollado en C++. Permite administrar películas, salas y ventas de entradas, incluyendo generación de reportes operativos. Implementa programación orientada a objetos y manejo de archivos para persistencia de datos."
         },
         greed: {
           title: "GREED – Proyecto de Desarrollo de Juego",
-          desc: "Un juego desarrollado como parte de un trabajo de programación enfocado en la lógica, algoritmos y estructuras de control."
+          desc: "Juego desarrollado en C como proyecto académico, enfocado en la implementación de lógica de juego. Se trabajó con estructuras de control, manejo de estados y algoritmos para gestionar las interacciones del jugador."
         }
       },
       details: {
         neovida: {
-          p1: "NeoVida es un sistema de gestión desarrollado como proyecto académico con el objetivo de organizar y administrar información médica dentro de un entorno de salud. El sistema permite a los usuarios registrar, consultar y actualizar información de pacientes mientras almacena los datos en una base de datos estructurada.",
+          p1: "NeoVida es un sistema de gestión médica desarrollado en C# y SQL Server. Permite registrar, consultar y actualizar información de pacientes, almacenando los datos en una base de datos relacional estructurada.",
+          responsibilitiesTitle: "Responsabilidades",
+          responsibilities: [
+            "Desarrollo de lógica en C#",
+            "Diseño de base de datos en SQL Server",
+            "Implementación de validaciones de datos",
+            "Conexión a base de datos con ADO.NET"
+          ],
           architecture: "Arquitectura del Proyecto",
           architectureDesc: "La aplicación interactúa fuertemente con una base de datos relacional para almacenar y recuperar perfiles de pacientes, historias clínicas y configuraciones del sistema. La capa de lógica estructurada en C# actúa como un puente que asegura la ejecución segura de consultas y validación de datos antes de mostrarlos en la interfaz.",
           featuresTitle: "Características Principales",
@@ -278,8 +303,13 @@ export const translations = {
           statusTitle: "Estado del Proyecto"
         },
         teatro: {
-          p1: "Este proyecto es un sistema de gestión de cines desarrollado como proyecto final para un curso de Programación II. El sistema fue diseñado para gestionar información relacionada con películas, salas de cine y venta de entradas.",
-          p2: "El programa permite a los usuarios registrar películas, asignarlas a salas de cine, gestionar ventas de tickets y generar reportes operativos. El sistema utiliza programación orientada a objetos y almacenamiento de datos basado en archivos para simular la gestión de un cine real.",
+          p1: "Sistema de gestión de cines desarrollado en C++. Permite administrar películas, salas y ventas de entradas, incluyendo generación de reportes operativos. Implementa programación orientada a objetos y manejo de archivos para persistencia de datos.",
+          responsibilitiesTitle: "Responsabilidades",
+          responsibilities: [
+            "Modelado de clases y lógica en C++",
+            "Implementación de almacenamiento en archivos",
+            "Desarrollo de funcionalidades de gestión y reportes"
+          ],
           architecture: "Arquitectura del Proyecto",
           architectureDesc: "El sistema logra una separación limpia de responsabilidades aislando la lógica de negocio en clases de entidad orientadas a objetos. Estas entidades se comunican con una capa de gestión de archivos dedicada, responsable de leer y escribir datos binarios en el disco, asegurando que la lógica principal permanezca independiente del mecanismo de almacenamiento.",
           operationTitle: "Operación del Sistema",
@@ -341,8 +371,14 @@ export const translations = {
           statusTitle: "Estado del Proyecto"
         },
         greed: {
-          p1: "GREED es un proyecto de programación desarrollado como parte de un trabajo universitario. El objetivo del proyecto fue construir un juego funcional mientras se aplicaban conceptos centrales de programación como algoritmos, estructuras de control y resolución de problemas.",
-          p2: "El proyecto se centra en implementar la lógica interna del juego, manejar interacciones del jugador y gestionar el estado del juego mediante código.",
+          p1: "Juego desarrollado en C como proyecto académico, enfocado en la implementación de lógica de juego. Se trabajó con estructuras de control, manejo de estados y algoritmos para gestionar las interacciones del jugador.",
+          responsibilitiesTitle: "Responsabilidades",
+          responsibilities: [
+            "Implementación de lógica del juego",
+            "Uso de estructuras de control (if, for)",
+            "Manejo de estados y flujo del juego",
+            "Desarrollo de algoritmos básicos"
+          ],
           architecture: "Arquitectura del Proyecto",
           architectureDesc: "El programa procesa secuencialmente la entrada del jugador. El bucle del juego captura los comandos de forma nativa, evalúa las acciones mediante los algoritmos de lógica del juego, actualiza las estructuras de memoria internas que representan el estado del juego y finalmente renderiza el nuevo cuadro devuelta a la salida de la consola.",
           featuresTitle: "Características Principales",
