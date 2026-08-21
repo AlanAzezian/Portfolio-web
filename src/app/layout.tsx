@@ -19,6 +19,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Alan Azezian | Programming Student",
   description: "Portfolio of Alan Azezian, a programming student at UTN General Pacheco passionate about building software.",
+  metadataBase: new URL("https://alan-azezian.netlify.app"),
+  openGraph: {
+    title: "Alan Azezian | Programming Student",
+    description: "Portfolio of Alan Azezian, a programming student at UTN General Pacheco passionate about building software.",
+    url: "https://alan-azezian.netlify.app/",
+    siteName: "Alan Azezian Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alan Azezian | Programming Student",
+    description: "Portfolio of Alan Azezian, a programming student at UTN General Pacheco passionate about building software.",
+  }
 };
 
 export default function RootLayout({
